@@ -1,22 +1,11 @@
-let instance = null;
-
 // Class design pattern
 class Car {
   constructor(doors, engine, color) {
-    // Singleton pattern
-    if (!instance) {
-      this.doors = doors;
-      this.engine = engine;
-      this.color = color;
-      instance = this;
-    } else {
-      return instance;
-    }
+    this.doors = doors;
+    this.engine = engine;
+    this.color = color;
   }
 }
-
-const civic = new Car(4, "V6", "grey");
-const honda = new Car(4, "V8", "red");
 
 // Constructor pattern
 class SUV extends Car {
@@ -26,4 +15,17 @@ class SUV extends Car {
   }
 }
 
-const cx5 = new SUV(4, "V8", "red");
+// Factory pattern
+class carFactory {
+  createCar(type) {
+    switch (type) {
+      case "civic":
+        return new Car(4, "V6", "grey");
+      case "honda":
+        return new Car(2, "V8", "red");
+    }
+  }
+}
+
+const factory = new carFactory();
+const myHonda = factory.createCar("honda")
