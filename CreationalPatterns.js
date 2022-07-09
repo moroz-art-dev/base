@@ -85,4 +85,4 @@ honda.revEngine();
 
 // Structural: Facade pattern : Example (code component react App = <App />)
 
-// Model-View-Controller (MVC) pattern  (DATA + HTML + LOGIC)
+// Structural: (MVC) pattern  (DATA + HTML + LOGIC) (->Model<->View<->Controller<-)
