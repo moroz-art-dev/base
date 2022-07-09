@@ -41,6 +41,8 @@ class SUV {
     this.engine = engine;
     this.color = color;
   }
+  // Structural: Decorator pattern
+  // @carMixin // work in TypeScript not JS
 }
 
 class SuvFactory {
