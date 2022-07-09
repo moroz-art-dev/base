@@ -73,3 +73,5 @@ Object.assign(Car.prototype, carMixin);
 const honda = autoManufacturer("car", "honda");
 
 honda.revEngine(); 
+
+// Facade pattern : Example (code component react App = <App />)
