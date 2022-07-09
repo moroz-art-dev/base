@@ -47,6 +47,13 @@ class SuvFactory {
   }
 }
 
+// Structural: Mixins pattern
+let carMixin = {
+  revEngine() {
+    console.log(`The ${this.engine} engine is doing Vroom Vroom!`)
+  }
+}
+
 const carFactory = new CarFactory();
 const suvFactory = new SuvFactory();
 
@@ -60,3 +67,9 @@ const autoManufacturer = (type, model) => {
 };
 
 const cx5 = autoManufacturer("suv", "sx5");
+
+Object.assign(Car.prototype, carMixin);
+
+const honda = autoManufacturer("car", "honda");
+
+honda.revEngine(); 
