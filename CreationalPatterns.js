@@ -1,9 +1,16 @@
+let instance = null;
 // Class design pattern
 class Car {
   constructor(doors, engine, color) {
-    this.doors = doors;
-    this.engine = engine;
-    this.color = color;
+    // Structural: Flyweight pattern
+    if (!instance) {
+      this.doors = doors;
+      this.engine = engine;
+      this.color = color;
+      instance = this;
+    } else {
+      return instance;
+    }
   }
 }
 
@@ -50,9 +57,9 @@ class SuvFactory {
 // Structural: Mixins pattern
 let carMixin = {
   revEngine() {
-    console.log(`The ${this.engine} engine is doing Vroom Vroom!`)
-  }
-}
+    console.log(`The ${this.engine} engine is doing Vroom Vroom!`);
+  },
+};
 
 const carFactory = new CarFactory();
 const suvFactory = new SuvFactory();
@@ -72,6 +79,6 @@ Object.assign(Car.prototype, carMixin);
 
 const honda = autoManufacturer("car", "honda");
 
-honda.revEngine(); 
+honda.revEngine();
 
 // Facade pattern : Example (code component react App = <App />)
