@@ -88,3 +88,5 @@ honda.revEngine();
 // Structural: (MVC) pattern  (DATA + HTML + LOGIC) (->Model<->View<->Controller<-)
 
 // Structural: (MVP) pattern  (DATA + HTML + LOGIC) (Model<->Presenter<->View)
+
+// Structural: (MVVM/MVVC) pattern (Model<->ViewModel'stateful'<->View'stateless')
