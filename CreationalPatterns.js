@@ -83,4 +83,6 @@ const honda = autoManufacturer("car", "honda");
 
 honda.revEngine();
 
-// Facade pattern : Example (code component react App = <App />)
+// Structural: Facade pattern : Example (code component react App = <App />)
+
+// Model-View-Controller (MVC) pattern  (DATA + HTML + LOGIC)
