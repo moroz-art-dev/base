@@ -31,3 +31,35 @@ class consumption {
         car.gas = car.gas + 1;
     }
 }
+
+// State pattern
+// React, Angular
+class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        news1: {
+          type: 'top-headlines',
+          query: 'sources=bbc-news'
+        },
+        news2: {
+          type: 'everything',
+          query: 'domains=techcrunch.com&language=en'
+        },
+        news3: {
+          type: 'everything',
+          query: 'domains=comicbookmovie.com&language=en'
+        }
+      };
+    }
+}
+
+class News extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        news: [],
+        error: false,
+      };
+    }
+}
