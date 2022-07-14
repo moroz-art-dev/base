@@ -139,3 +139,6 @@ class Airplane {
     return this.trafficTower.requestPositions();
   }
 }
+
+// Command pattern 
+// Redux
